@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Serviços de endereço DIGIPIX";
+}
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>Consultar Endereço por CEP</h4>
+        <hr>
+        <div class="text-danger validation-summary-valid">
+            <ul>
+                <li id="summary" style="display:none"></li>
+            </ul>
+        </div>
+        <div class="form-group">
+            <label for="Input_Email">Digite o CEP</label>
+            <input class="form-control" type="email" id="Input_CEP" name="CEP" value="">           
+        </div>      
+        <button type="button" class="btn btn-default" onclick="GetAddressByCEP()">Consultar</button>       
+    </div>
+    <div id="Address" class="col-md-8" style="display:none">
+        <br />       
+        <br />
+        <h3 style="font-weight:bold;">CEP: <strong id="CEP_SEARCH"></strong></h3>
+        <h4><b>State:</b> <span id="state"></span></h4>
+        <h4><b>City:</b> <span id="city"></span></h4>
+        <h4><b>Neighborhood:</b> <span id="neighborhood"></span></h4>
+        <h4><b>Street:</b> <span id="street"></span></h4>
+        <h4><b>IBGE:</b> <span id="ibge"></span></h4>
+        <h4><b>Additional Information: </b> <span id="additional_info"></span></h4>
+        @*<h4>Bairro: <span id="bairro"></span></h4>*@
+    </div>
+</div>
