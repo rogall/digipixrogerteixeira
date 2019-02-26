@@ -35,22 +35,16 @@ function GetAddressByCEP() {
                 if (!$.isBlank(response.message)) {
                     $("#Address").hide();
 
-                    //não vou mostrar o campo "developerMessage" para o usuário
-                    $("#summary").html(response.message + " | " + response.kind);
+                    $("#summary").html(response.message);
                     $("#summary").show();
                 }
                 else {
                     $("#Address").show();
-                    $("#CEP_SEARCH").html(cep);                    
+                    $("#CEP_SEARCH").html(response.zipcode);                    
                     $("#city").html(response.city);    
-                    $("#state").html(response.state);    
+                    $("#state").html(response.state_short);    
                     $("#neighborhood").html(response.neighborhood);    
-                    $("#street").html(response.street);    
-                    $("#ibge").html(response.ibge);    
-                    $("#additional_info").html(response.additional_info);    
-
-                    //BAIRRO e NEIGHBORHOOD são a mesma coisa
-                    //$("#bairro").html(response.bairro);
+                    $("#street").html(response.street);  
                 }               
             },
             failure: function (response) {

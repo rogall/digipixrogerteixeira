@@ -8,7 +8,7 @@ namespace DigipixDomain.Models
     {
         //Error props
         public string kind;
-        public string message;
-        public string developerMessage;
+        public string error;
+        public string message; 
     }
 }

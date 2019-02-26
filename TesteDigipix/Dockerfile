@@ -9,6 +9,8 @@ EXPOSE 443
 FROM microsoft/dotnet:2.1-sdk-nanoserver-1803 AS build
 WORKDIR /src
 COPY ["TesteDigipix/TesteDigipix.csproj", "TesteDigipix/"]
+COPY ["DigipixServices/DigipixServices.csproj", "DigipixServices/"]
+COPY ["DigipixDomain/DigipixDomain.csproj", "DigipixDomain/"]
 RUN dotnet restore "TesteDigipix/TesteDigipix.csproj"
 COPY . .
 WORKDIR "/src/TesteDigipix"

@@ -9,14 +9,13 @@
     <div class="col-md-4">
         <h4>Consultar Endereço por CEP</h4>
         <hr>
-        <div class="text-danger validation-summary-valid">
-            <ul>
-                <li id="summary" style="display:none"></li>
-            </ul>
+        <div>
+            <span id="summary" style="display:none; color:orangered;"></span>
         </div>
+        <br />
         <div class="form-group">
             <label for="Input_Email">Digite o CEP</label>
-            <input class="form-control" type="email" id="Input_CEP" name="CEP" value="">           
+            <input class="form-control" type="text" id="Input_CEP" name="CEP" value="" maxlength="8" />           
         </div>      
         <button type="button" class="btn btn-default" onclick="GetAddressByCEP()">Consultar</button>       
     </div>
@@ -27,9 +26,6 @@
         <h4><b>State:</b> <span id="state"></span></h4>
         <h4><b>City:</b> <span id="city"></span></h4>
         <h4><b>Neighborhood:</b> <span id="neighborhood"></span></h4>
-        <h4><b>Street:</b> <span id="street"></span></h4>
-        <h4><b>IBGE:</b> <span id="ibge"></span></h4>
-        <h4><b>Additional Information: </b> <span id="additional_info"></span></h4>
-        @*<h4>Bairro: <span id="bairro"></span></h4>*@
+        <h4><b>Street:</b> <span id="street"></span></h4>     
     </div>
 </div>
