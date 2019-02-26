@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  testedigipix:
+    image: ${DOCKER_REGISTRY-}testedigipix
+    build:
+      context: .
+      dockerfile: TesteDigipix\Dockerfile
